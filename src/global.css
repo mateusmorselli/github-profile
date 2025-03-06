@@ -12,6 +12,19 @@
     margin: 0 auto;
 }
 
+
+
+.search {
+    width: 100%;
+    height: 80px; /* Tamanho fixo */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    background-color: var(--corSecundaria);
+    display: flex; /* Ativa o flexbox */
+    flex-direction: column; /* Coloca os itens um embaixo do outro */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+}
+
 :root {
     --corPrincipal: #E1DDDA;
     --corSecundaria: #DD8F9F;

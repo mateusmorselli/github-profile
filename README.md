@@ -1,12 +1,52 @@
-# React + Vite
+# ReposList
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto consiste em uma aplicação React que permite buscar os repositórios públicos de um usuário no GitHub. A aplicação utiliza a API do GitHub para buscar os repositórios e exibi-los de forma organizada. Em caso de erro, como um usuário inexistente, a aplicação exibe uma mensagem de erro informando o problema.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Pesquisa de repositórios de um usuário no GitHub.
+- Exibição de nome e linguagem dos repositórios.
+- Link direto para os repositórios no GitHub.
+- Exibição de mensagem de erro caso o usuário não exista.
 
-## Expanding the ESLint configuration
+## Como Usar
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone este repositório para sua máquina local:
+
+    ```bash
+    git clone https://github.com/SEU_USUARIO/reposlist.git
+    ```
+
+2. Navegue até a pasta do projeto:
+
+    ```bash
+    cd reposlist
+    ```
+
+3. Instale as dependências do projeto:
+
+    ```bash
+    npm install
+    ```
+
+4. Inicie a aplicação:
+
+    ```bash
+    npm start
+    ```
+
+5. Abra a aplicação no navegador (`http://localhost:3000`) e pesquise um usuário GitHub para ver os repositórios públicos.
+
+## Exemplo de Uso
+
+Quando o nome de um usuário válido é digitado, os repositórios serão exibidos com seu nome, linguagem de programação e um link para acessar diretamente o repositório no GitHub. Caso o nome de usuário seja inválido ou o usuário não exista, uma mensagem de erro será exibida.
+
+## Tecnologias Utilizadas
+
+- React
+- CSS Modules (para estilização)
+- API GitHub (para busca dos repositórios)
+
+## Licença
+
+Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 import Perfil from "./components/Perfil";
 import Formulario from "./components/formulario";
@@ -8,12 +8,23 @@ function App() {
 
 
   const [formularioEstaVisivel, setFormularioEstaVisivel] = useState(true);
-  const [nomeUsuario, setNomeUsuario] = useState('');
+
+  const inputRef = useRef(null);
+  const [nomeUsuario, setNomeUsuario] = useState("");
+
+  const clickButton = () => {
+    setNomeUsuario(inputRef.current.value); // Captura o valor do input ao clicar no botão
+  };
 
   return(
 
     <div>
-      <input type="text" onBlur={(e) => setNomeUsuario(e.target.value)} />
+
+      <div class="search">
+          <input type="text" ref={inputRef} placeholder="Procure um usuário" />
+          <button type="button" onClick={clickButton}>Procurar</button>
+      </div>     
+      
 
       {nomeUsuario.length > 4 && (
         <>
